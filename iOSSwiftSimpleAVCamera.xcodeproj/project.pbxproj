@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		AD7E24C71963A9FC00A92F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E24C61963A9FC00A92F75 /* AppDelegate.swift */; };
 		AD7E24CA1963A9FC00A92F75 /* iOSSwiftSimpleAVCamera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AD7E24C81963A9FC00A92F75 /* iOSSwiftSimpleAVCamera.xcdatamodeld */; };
-		AD7E24CC1963A9FC00A92F75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E24CB1963A9FC00A92F75 /* ViewController.swift */; };
 		AD7E24CF1963A9FC00A92F75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7E24CD1963A9FC00A92F75 /* Main.storyboard */; };
 		AD7E24D11963A9FC00A92F75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7E24D01963A9FC00A92F75 /* Images.xcassets */; };
 		AD7E24DD1963A9FC00A92F75 /* iOSSwiftSimpleAVCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E24DC1963A9FC00A92F75 /* iOSSwiftSimpleAVCameraTests.swift */; };
+		AD7E24E71963AA4C00A92F75 /* CameraSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E24E61963AA4C00A92F75 /* CameraSessionController.swift */; };
+		AD7E24E91963AAA800A92F75 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7E24E81963AAA800A92F75 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,12 +31,13 @@
 		AD7E24C51963A9FC00A92F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7E24C61963A9FC00A92F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD7E24C91963A9FC00A92F75 /* iOSSwiftSimpleAVCamera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSSwiftSimpleAVCamera.xcdatamodel; sourceTree = "<group>"; };
-		AD7E24CB1963A9FC00A92F75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD7E24CE1963A9FC00A92F75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD7E24D01963A9FC00A92F75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AD7E24D61963A9FC00A92F75 /* iOSSwiftSimpleAVCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSSwiftSimpleAVCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7E24DB1963A9FC00A92F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7E24DC1963A9FC00A92F75 /* iOSSwiftSimpleAVCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSwiftSimpleAVCameraTests.swift; sourceTree = "<group>"; };
+		AD7E24E61963AA4C00A92F75 /* CameraSessionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraSessionController.swift; sourceTree = "<group>"; };
+		AD7E24E81963AAA800A92F75 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				AD7E24C61963A9FC00A92F75 /* AppDelegate.swift */,
-				AD7E24CB1963A9FC00A92F75 /* ViewController.swift */,
-				AD7E24CD1963A9FC00A92F75 /* Main.storyboard */,
-				AD7E24D01963A9FC00A92F75 /* Images.xcassets */,
-				AD7E24C81963A9FC00A92F75 /* iOSSwiftSimpleAVCamera.xcdatamodeld */,
+				AD7E24E61963AA4C00A92F75 /* CameraSessionController.swift */,
+				AD7E24E81963AAA800A92F75 /* CameraViewController.swift */,
 				AD7E24C41963A9FC00A92F75 /* Supporting Files */,
 			);
 			path = iOSSwiftSimpleAVCamera;
@@ -90,6 +90,9 @@
 		AD7E24C41963A9FC00A92F75 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AD7E24CD1963A9FC00A92F75 /* Main.storyboard */,
+				AD7E24D01963A9FC00A92F75 /* Images.xcassets */,
+				AD7E24C81963A9FC00A92F75 /* iOSSwiftSimpleAVCamera.xcdatamodeld */,
 				AD7E24C51963A9FC00A92F75 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -211,7 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD7E24CC1963A9FC00A92F75 /* ViewController.swift in Sources */,
+				AD7E24E91963AAA800A92F75 /* CameraViewController.swift in Sources */,
+				AD7E24E71963AA4C00A92F75 /* CameraSessionController.swift in Sources */,
 				AD7E24C71963A9FC00A92F75 /* AppDelegate.swift in Sources */,
 				AD7E24CA1963A9FC00A92F75 /* iOSSwiftSimpleAVCamera.xcdatamodeld in Sources */,
 			);
@@ -330,6 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = iOSSwiftSimpleAVCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -341,6 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = iOSSwiftSimpleAVCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
